@@ -1,20 +1,4 @@
 // HashMapTests.cpp
-//
-// ICS 45C Fall 2019
-// Project #3: Maps and Legends
-//
-// Write unit tests for your HashMap class here.  I've provided a few tests
-// already, though I've commented them out, because they won't compile and
-// link until you've implemented some things.
-//
-// Of course, you'll want to write lots more of these tests yourself, because
-// this is an inexpensive way to know whether things are working the way
-// you expect -- including scenarios that you won't happen to hit in the
-// course of testing your overall program.  (You might also want to be sure
-// that your HashMap implementation is complete and correct before you try
-// to write the rest of the program around it, anyway; there's a very
-// substantial amount of partial credit available if all that works is
-// HashMap.)
 
 #include <gtest/gtest.h>
 #include "HashMap.hpp"
