@@ -11,14 +11,6 @@
 // This HashMap consists of a dynamically-allocated array of "buckets,"
 // each of which is a pointer to the first node in a linked list of
 // key/value pairs that have hashed to that bucket.
-//
-// You may not make changes to the public members of this class the way
-// they're declared now, since we will be running unit tests against
-// your class that will expect these declarations not to have changed
-// (and that its member functions are implemented as specified in the
-// comments below).  However, you are free to add whatever additional
-// members you feel are necessary, including new member variables or
-// member functions (public or private).
 
 #ifndef HASHMAP_HPP
 #define HASHMAP_HPP
@@ -65,9 +57,7 @@ public:
 
 public:
     // This constructor initializes the HashMap to use whatever default
-    // hash function you'd like it to use.  A little research online will
-    // yield some good ideas about how to write a good hash function for
-    // strings; don't just return zero or, say, the length of the string.
+    // hash function you'd like it to use.
     HashMap();
 
     // This constructor instead initializes the HashMap to use a particular
@@ -152,7 +142,6 @@ private:
     // it with parentheses and a parameter) just like you would any other
     // function.
     HashFunction hashFunction;
-    // You will no doubt need to add at least a few more private members
 
     Node** buckets;
 
