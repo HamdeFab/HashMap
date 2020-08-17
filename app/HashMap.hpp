@@ -48,21 +48,16 @@ public:
     // have when it is initially constructed.  (A "constexpr" is similar
     // to a variable that's constant, except that it can be defined as
     // any arbitrary expression that can be calculated at compile time.)
-    // 
-    // We've made it static because it pertains to the entire class
-    // rather than each instance of the class separately.  The best way
-    // to use this value would be to say "HashMap::INITIAL_BUCKET_COUNT".
     static constexpr unsigned int INITIAL_BUCKET_COUNT = 10;
 
 
 public:
-    // This constructor initializes the HashMap to use whatever default
-    // hash function you'd like it to use.
+    // This constructor initializes the HashMap to use a default
+    // hash function.
     HashMap();
 
     // This constructor instead initializes the HashMap to use a particular
-    // hash function instead of the default.  (We'll use this in our unit
-    // tests to control the scenarios more carefully.)
+    // hash function instead of the default.
     HashMap(HashFunction hashFunction);
 
     // The "Big Three" need to be implemented appropriately, so that HashMaps
@@ -101,9 +96,7 @@ public:
 
     // value() returns the value associated with the given key in this HashMap
     // if the key is stored in this HashMap; if not, the empty string is
-    // returned.  (Going forward, we'll discover that throwing an exception
-    // is a better way to handle the scenario where the key is not present,
-    // but we'll conquer that at a later date.)
+    // returned.
     std::string value(const std::string& key) const;
 
     // size() returns the number of key/value pairs stored in this HashMap.
